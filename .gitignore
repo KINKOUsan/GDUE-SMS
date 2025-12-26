@@ -1,0 +1,49 @@
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# IDE配置文件
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 后端编译产物
+SMSBackend/target/
+*.class
+
+# 前端编译产物
+smsfrontend/dist/
+smsfrontend/dist-ssr/
+smsfrontend/node_modules/
+
+# 日志文件
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 临时文件
+*.tmp
+*.temp
+*.cache
+
+# 环境变量文件
+.env
+.env.local
+.env.*.local
+
+# 测试覆盖率
+coverage/
+__screenshots__/
+
+# 构建工具
+.smsfrontend/.vite/
