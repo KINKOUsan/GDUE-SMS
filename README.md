@@ -76,7 +76,7 @@ GDUE-SMS/
 
 ### 数据库配置
 
-1.根据[GDUE-SMS.sql](./GDUE-SMS.sql)在您的MySQL建立数据库与表，并插入样本数据。
+1. 根据[GDUE-SMS.sql](./GDUE-SMS.sql)在您的MySQL建立数据库与表，并插入样本数据。
 
 2. 修改数据库配置：
 编辑 `SMSBackend/src/main/resources/application.yml` 文件，修改数据库连接信息，使用户名与密码信息与您主机的MySQL设定的的一致。
