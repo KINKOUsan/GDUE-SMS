@@ -76,34 +76,10 @@ GDUE-SMS/
 
 ### 数据库配置
 
-1. 创建数据库：
-```sql
-CREATE DATABASE student_management CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-```
+1.根据[GDUE-SMS.sql](./GDUE-SMS.sql)在您的MySQL建立数据库与表，并插入样本数据。
 
-2. 创建数据表：
-```sql
--- 专业表
-CREATE TABLE majors (
-    id BIGINT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(50) NOT NULL COMMENT '专业名称'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='专业表';
-
--- 学生表
-CREATE TABLE students (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(50) NOT NULL COMMENT '学生姓名',
-    student_id VARCHAR(20) NOT NULL COMMENT '学号',
-    gender VARCHAR(10) NOT NULL COMMENT '性别',
-    age INT NOT NULL COMMENT '年龄',
-    major_id BIGINT NOT NULL COMMENT '专业ID',
-    score DOUBLE NOT NULL COMMENT '分数',
-    FOREIGN KEY (major_id) REFERENCES majors(id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='学生表';
-```
-
-3. 修改数据库配置：
-编辑 `SMSBackend/src/main/resources/application.yml` 文件，修改数据库连接信息。
+2. 修改数据库配置：
+编辑 `SMSBackend/src/main/resources/application.yml` 文件，修改数据库连接信息，使用户名与密码信息与您主机的MySQL设定的的一致。
 
 ### 后端启动
 
